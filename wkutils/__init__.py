@@ -20,7 +20,7 @@ def gross_payment(rate, nper, pv):
     '''
         
     '''
-    return float(twoDecimalPlaces(npf.pmt(rate/(nper*12), nper*12, pv)))
+    return float(twoDecimalPlaces(npf.pmt(rate/12, nper*12, pv)))
 
 def net_payment(grosspayment):
     return float(twoDecimalPlaces(grosspayment * (1-0.22)))
